@@ -8,9 +8,7 @@ export default (props) => {
     	<div className="container">
     		<div className="row">
     			<div className="col-md-12">
-    				<h1>Gili & Matan</h1>
-					<h3><span>Are getting</span></h3>
-					<h2>MARRIED!</h2>					
+					<h2>Let's find it!</h2>					
     			</div>
     		</div>
     	</div>

@@ -2,11 +2,11 @@
     font-family: 'EB Garamond',serif;
     margin-bottom: 0;
     border-radius: 0px;
-    background-color: white;
+    background-color: black;
     border-color: green;
 
 }
 
 #navigation-bar li a:hover, #navigation-bar li a:visited , #navigation-bar li a:focus {
-    color:black;
+    color:yellow;
 }

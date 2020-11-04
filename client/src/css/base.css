@@ -1,11 +1,11 @@
 
-section#rsvp {
+section#base {
     margin-bottom: 70px;
 }
 
-section#rsvp input[type=text].form-control, section#rsvp select.form-control,
-section#rsvp input[type=email].form-control,
-section#rsvp textarea.form-control {
+section#base input[type=text].form-control, section#base select.form-control,
+section#base input[type=email].form-control,
+section#base textarea.form-control {
     border-color: #ced4da!important;
     border-radius: 2px;
     color: #495057;
@@ -16,7 +16,7 @@ section#rsvp textarea.form-control {
     padding: .875rem 1rem; */
 }
 
-section#rsvp h3 {
+section#base h3 {
     position: relative;
     font-family: 'EB Garamond',serif;
     font-size: 48px;
@@ -31,11 +31,11 @@ section#rsvp h3 {
     margin-bottom: 50px;
 }
 
-section#rsvp h4 {
+section#base h4 {
     text-align: center;
 }
 
-section#rsvp button {
+section#base button {
     margin-top: 3.5rem;
     background-color: #fff;
     background-image: none;
@@ -61,7 +61,7 @@ section#rsvp button {
     transition: all .3s ease-in-out;
 }
 
-section#rsvp button:hover {
+section#base button:hover {
     background-color: #aacd62;
     background-image: none;
     -webkit-background-size: initial;

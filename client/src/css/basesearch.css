@@ -1,4 +1,4 @@
-section#ceremony {
+section#basesearch {
     position: relative;
     width: 100%;
     padding-top: 120px;
@@ -6,7 +6,7 @@ section#ceremony {
     padding-bottom: 140px;
     padding-left: 0;
     background-color: transparent;
-    /* background-image: url(../img/ceremony.jpg); */
+    /* background-image: url(../img/basesearch.jpg); */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
@@ -17,7 +17,7 @@ section#ceremony {
     background-attachment: initial;
 }
 
-section#ceremony h1 {
+section#basesearch h1 {
     padding-bottom: 30px;
     font-family: 'Dancing Script',cursive;
     font-size: 85px;
@@ -28,7 +28,7 @@ section#ceremony h1 {
     text-align: center;
 }
 
-section#ceremony h3 {
+section#basesearch h3 {
     position: relative;
     font-family: 'EB Garamond',serif;
     font-size: 18px;
@@ -41,7 +41,7 @@ section#ceremony h3 {
     text-shadow: 2px 1px 0 rgba(0,0,0,0.25);
 }
 
-section#ceremony h3:before {
+section#basesearch h3:before {
     content: "";
     position: absolute;
     z-index: 3px;
@@ -62,7 +62,7 @@ section#ceremony h3:before {
     background-attachment: initial;
 }
 
-section#ceremony h3:after {
+section#basesearch h3:after {
     content: "";
     position: absolute;
     z-index: 3px;
@@ -83,7 +83,7 @@ section#ceremony h3:after {
     background-attachment: initial;
 }
 
-section#ceremony h2 {
+section#basesearch h2 {
     padding-top: 20px;
     font-family: 'Raleway',sans-serif;
     font-size: 120px;
@@ -94,12 +94,25 @@ section#ceremony h2 {
     text-align: center;
 }
 
-section#ceremony h4 {
+section#basesearch h4 {
     font-family: 'EB Garamond',serif;
     font-size: 30px;
     line-height: 24px;
     font-weight: 400;
     color: #9d9d9d;
+    text-align: center;
+    /*text-transform: capitalize;*/
+    letter-spacing: 8px;
+    margin-top: 70px;
+    /* text-shadow: 2px 1px 0 rgba(0,0,0,0.4); */
+}
+
+section#basesearch h5 {
+    font-family: 'Dancing Script',cursive;
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: 400;
+    color: red;
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 8px;

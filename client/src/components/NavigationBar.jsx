@@ -24,20 +24,14 @@ export default (props) => {
         <Nav pullRight>
             <NavItem eventKey={1} href="#home-scroll">
                 Home
-      </NavItem>
-        <NavItem eventKey={2} href="#ceremony-scroll">
-                About
-      </NavItem>
-      <NavItem eventKey={3} href="#greetings-scroll">
-                Greetings
-      </NavItem>
-            <NavItem eventKey={4} href="#location">
-                Location
-      </NavItem>
-      <NavItem eventKey={5} href="#rsvp-scroll">
-                RSVP
-      </NavItem>
-        </Nav>
+            </NavItem>
+            <NavItem eventKey={2} href="#base-scroll">
+                Base search
+            </NavItem>
+            <NavItem eventKey={4} href="#basesearch-scroll">
+                Thoughts
+            </NavItem>
+        </Nav>    
     </Navbar.Collapse>
 </Navbar>
 

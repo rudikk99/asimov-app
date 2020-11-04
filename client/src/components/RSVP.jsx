@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/RSVP.css'
+import '../css/base.css'
 import ScrollableAnchor from 'react-scrollable-anchor'
 
 export default props => {

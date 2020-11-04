@@ -3,79 +3,56 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/main.css'
 import { Jumbotron } from 'react-bootstrap'
 import HomeSection from './components/Home'
-import Location from './components/Location'
 import NavigationBar from './components/NavigationBar'
-import Ceremony from './components/Ceremony'
-import RSVP from './components/RSVP'
+import Base from './components/Base.jsx'
+import Basesearch from './components/Basesearch.jsx'
 import axios from 'axios'
 import { configureAnchors } from 'react-scrollable-anchor'
-import Greetings from './components/Greetings'
+
 export default class Page extends Component {
 
   constructor() {
     super();
     this.state = {
-      rsvpForm: {
-        fullName: '',
-        email: '',
-        additionalInformation: '',
-        guests: '',
-        events: '',
-        isRsvpSent: false
-      },
-      greetings: [],      
+      baseForm: {
+        fragment: '',
+        rex: '',
+        isBaseSent: false
+      },     
     };
-    this.handleRsvp = this.handleRsvp.bind(this);
+    this.handleBase = this.handleBase.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  
   handleChange(event) {    
     const obj = {};
-    obj['rsvpForm'] = {...this.state.rsvpForm}
-    obj['rsvpForm'][event.target.name] = event.target.value;
+    obj['baseForm'] = {...this.state.baseForm}
+    obj['baseForm'][event.target.name] = event.target.value;
     this.setState(obj);
   };
 
-  handleRsvp = (event) => {
+  handleBase = (event) => {
     event.preventDefault();
-    const data = {...this.state.rsvpForm}      
+    const data = {...this.state.baseForm}      
     
-    axios.post(`rsvp`, data)
-    // axios.post(`${process.env.REACT_APP_USERS_SERVICE_URL}/rsvp`, data)    
+    axios.post(`base`, data)
+    // axios.post(`${process.env.REACT_APP_USERS_SERVICE_URL}/base`, data)    
       .then((res) => {             
-        this.setState({rsvpForm: {fullName: '', email: '', additionalInformation: '', greeting: '', guests: '', events: '', isRsvpSent: true}});
+        this.setState({baseForm: {fragment: '', isBaseSent: true}});
       })
       .catch((err) => {
         console.log(err);
       });
   }
 
-  getGreetings = () => {    
-    // axios.get(`${process.env.REACT_APP_USERS_SERVICE_URL}/greetings`)
-    axios.get(`greetings`)     
-    .then((res) => {              
-     this.setState({greetings: res.data.data.greetings});
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  }
-
-  componentDidMount() {    
-    this.getGreetings();
-  }
-
   render() {
     configureAnchors({scrollDuration: 1200})
     return (
       <div>
-        <NavigationBar id={'navigation-bar'} brand={"Gili & Matan - The Wedding"} />
+        <NavigationBar id={'navigation-bar'} brand={"DNA Seq Search"} />
         <HomeSection id={'home'} />
-        <Ceremony id={'ceremony'} />
-        <Greetings greetings={this.state.greetings} />
-        <Location id={'location'} />    
-        <RSVP id={'rsvp'} handleRsvp={this.handleRsvp} handleChange={this.handleChange} { ...this.state.rsvpForm  }/>        
+        <Base id={'base'} handleBase={this.handleBase} handleChange={this.handleChange} { ...this.state.baseForm  }/>     
+        <Basesearch id = {'basesearch'} />   
       </div>
     )
   }
