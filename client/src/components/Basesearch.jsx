@@ -36,6 +36,7 @@ export default props => {
                     <h4>the functionality to perform a search in public DB (Blast) and recive return data </h4>
                     <h4>in case nothing has been found, it might be usefull to be able to "order" desired full seq from partner/departement</h4>
                     <h4>there is a posibility to incorporate flexible search with the use of regular expressions (for example: AT*T) </h4>
+                    <h4>technical: reg expressions: only ATCG and special characters are allowed </h4>
                     
 
 

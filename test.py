@@ -19,23 +19,27 @@ class BaseTestCase(TestCase):
         db.drop_all()
 
 
-class TestRsvp(BaseTestCase):
-    def test_rsvp_added(self):
-        """Ensure the Rsvp has beed added succefully"""
+class TestRecord(BaseTestCase):
+    def test_record_added(self):
+        """Ensure the Record has beed added succefully"""
         with self.client:
             response = self.client.post(
-                '/rsvp',
+                '/record',
                 data=json.dumps({
-                    'fullName': 'michael',
-                    'email': 'michael@mherman.org',
-                    'message': 'see you there!'
+                    'sid': 'seq_asQya4lk',
+                    'bases': 'GATTACA',
+                    'name': 'My Sequence',
+                    'createdAt': '2017-04-20T18:11:56.283088+00:00',
+                    'creatorhandle': 'lpasteur',
+                    'creatorid': 'ent_jDKampO5',
+                    'creatorname': 'Louis Pasteur'
                 }),
                 content_type='application/json',
             )
             data = json.loads(response.data.decode())
             self.assertEqual(response.status_code, 201)
             self.assertIn('success', data['status'])
-            self.assertIn('RSVP has been added', data['message'])
+            self.assertIn('Record has been added', data['message'])
 
 
 

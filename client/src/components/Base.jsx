@@ -26,32 +26,32 @@ export default props => {
                                             type="text"
                                             name="sequence"
                                             id="base-sequence"
-                                            className="font-alt form-control required"
+                                            className="font-alt form-control"
                                             placeholder="Exact Fragment Seq"
                                             value={props.sequence}
                                             onChange={props.handleChange}
-                                            required
+                                            //required
                                         />
                                     </div>
                                 </div>
 
 
-                                <div className="col-md-6">
+{/*                             <div className="col-md-6">
                                     <div className="form-group">
                                         <label htmlFor="base-rex" className="text-medium">DNA seq similar fragment (A**TC):</label>
                                         <input
                                             type="text"
                                             name="rex"
                                             id="base-rex"
-                                            className="font-alt form-control required"
+                                            className="font-alt form-control "
                                             placeholder="Regular Expression Search"
                                             value={props.rex}
                                             onChange={props.handleChange}
-                                            required
+                                            //required
                                         />
                                     </div>
 
-                                </div>
+                                </div> */}
 
                             </div>
 

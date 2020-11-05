@@ -4,7 +4,6 @@ section#base {
 }
 
 section#base input[type=text].form-control, section#base select.form-control,
-section#base input[type=email].form-control,
 section#base textarea.form-control {
     border-color: #ced4da!important;
     border-radius: 2px;
